@@ -1,0 +1,19 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+freq = {
+    '0-199': 143,
+    '200-399': 97,
+    '400-599': 64,
+    '600-799': 51,
+    '800-999': 14,
+    '1000-1199': 14,
+    '1200-1999': 17
+}
+
+dfreq = pd.DataFrame.from_dict(freq, orient="index")
+print(dfreq)
+
+dfreq.hist(bins=7)
+
+plt.show()
